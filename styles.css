@@ -10,21 +10,6 @@ html {
     scroll-behavior: smooth;
 }
 
-
-.container {
-    display: flex;
-    flex-wrap: wrap;
-    max-width: 1200px;
-    margin: 0 auto;
-}
-
-/* .header {
-    background-color: none;
-    overflow: hidden;
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-} */
 .header a {
     float: right;
     color: black;
@@ -46,9 +31,12 @@ html {
 /* GLOBAL STYLES */
 .typewriter {
     background: #333;
-    padding: 2em 1em;
+    padding: 3em 1em;
     display: flex;
     justify-content: center;
+    max-width: 100%;
+    overflow: hidden; /* Add this line */
+    flex-wrap: wrap; /* Add this line */
 }
 
 .typewriter h1 {
@@ -61,6 +49,10 @@ html {
     max-width: 100%;
     white-space: nowrap;
     text-align: center;
+    display: inline-block;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+    flex-grow: 1; /* Add this line */
 }
 
 /* .first-section {
@@ -101,24 +93,46 @@ display: none;
 .profile-content {
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
+    margin: 0 auto;
     align-items: center;
     justify-content: center;
-    width: 75%;
+    width: 90%;
     border: #696969 solid 2px;
-    padding-right: 20px;
+    /* padding-right: 20px; */
     font-size:150%;
     border-radius: .3em;
+    box-sizing: border-box;
+    padding: 1%;
 }
 
 .profile-content img {
-    width: 600px;
-    height: 825px;
-    margin-right: 4%;
-    margin-left: 2%;
+    /* max-width: 100%; */
+    height: auto;
+    max-width: 90%;
+    margin: 0 auto;
+    /* margin-right: 4%; */
+    /* margin-left: 2%; */
+    border: #696969 solid 2px;
 }
+
 
 .profile-text {
     flex: 1;
+    padding: 2.5%;
+}
+
+.profile-text ul {
+    padding-left: 20px;
+    margin-bottom: 0;
+}
+
+.profile-text ul li {
+    margin-bottom: 5px;
+}
+
+.profile-text p {
+    margin-bottom: 15px;
 }
 
 .card-container {
@@ -184,6 +198,7 @@ display: none;
     position: absolute;
     bottom: 0;
     width: 100%;
+    margin: 0 auto;
     height: 70px;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
     background: #fff;
@@ -260,9 +275,8 @@ display: none;
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-bottom: 4rem;
-    padding-left: 25px;
-    padding-right: 25px;
+    /* padding-left: 25px; */
+    /* padding-right: 25px; */
 }
 
 .skills-section h2 {
@@ -271,8 +285,9 @@ display: none;
 }
 
 .card-container {
-    display: grid;
-    grid-template-columns: 1fr;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
     gap: 1.5rem;
 }
 
@@ -280,6 +295,7 @@ display: none;
     position: relative;
     overflow: hidden;
     width: 100%;
+    margin: 0 auto;
     max-width: 100%; 
     height: auto;
     border-radius: 10px;
@@ -334,17 +350,17 @@ display: none;
 }
 
 .section5 {
+    width: 90%; /* Control the width of the section */
     margin: 0 auto; /* Center the section horizontally */
     padding: 20px; /* Add padding to give some space */
-    width: 95%; /* Control the width of the section */
-    max-width: 1200px; /* Maximum width of the section */
+    /* max-width: 1200px;  */
 }
 
 .l-container {
     display: flex; /* Align the cards in a row */
     flex-wrap: wrap; /* Wrap the cards to the next line when they don't fit */
     justify-content: space-between; /* Distribute equal space between the cards */
-    margin: 20px 0; /* Add some margin to the top and bottom */
+    margin: 0 auto; /* Add some margin to the top and bottom */
 }
 
 .project-popup {
@@ -532,8 +548,9 @@ body {
     justify-content: center;
     width: 75%; 
     border: #696969 solid 1.5px;
-    padding: 20px; 
+    padding: 10px; 
     border-radius: .5em;
+    margin: 0 auto;
 }
 
 form {
