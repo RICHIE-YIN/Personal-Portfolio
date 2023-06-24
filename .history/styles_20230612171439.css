@@ -1,0 +1,631 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Balsamiq+Sans&family=Raleway&family=Roboto&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Raleway', sans-serif;
+}
+html {
+    scroll-behavior: smooth;
+}
+
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+    .container {
+        width: 100%;
+    }
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+    .container {
+        width: 85%;
+    }
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+    .container {
+        width: 80%;
+    }
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+    .container {
+        width: 75%;
+        max-width: 1200px;
+    }
+}
+
+/* .header {
+    background-color: none;
+    overflow: hidden;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+} */
+.header a {
+    float: right;
+    color: black;
+    text-align: center;
+    padding: 14px 14px;
+    text-decoration: none;
+    font-size: 28px;
+}
+.header a:hover {
+    background-color: black;
+    color: white;
+    font-size: 40px;
+    font-size-adjust: 20px;
+}
+.header a.split {
+    float: left;
+}
+
+/* GLOBAL STYLES */
+.typewriter {
+    background: #333;
+    padding: 2em 1em;
+    display: flex;
+    justify-content: center;
+}
+
+.typewriter h1 {
+    color: white;
+    font-family: monospace;
+    overflow: hidden;
+    border-right: .15em solid white;
+    margin: 0 auto;
+    letter-spacing: .15em;
+    max-width: 100%;
+    white-space: nowrap;
+    text-align: center;
+}
+
+/* .first-section {
+    position: relative;
+} */
+
+.sticky {
+    position: fixed;
+    top: 0;
+    z-index: 100;
+}
+
+
+/* The typing effect */
+@keyframes typing {
+from { width: 0 }
+to { width: 11em }
+}
+
+/* The typewriter cursor effect */
+@keyframes blink-caret {
+from, to { border-color: transparent }
+50% { border-color: white }
+}
+
+.typewriter h1.hidden {
+display: none;
+}
+
+.profile-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-left: 25px;
+    padding-right: 25px;
+}
+
+.profile-content {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    border: #696969 solid 2px;
+    padding-right: 20px;
+    font-size:150%;
+    border-radius: .3em;
+    box-sizing: border-box;
+}
+
+/* .profile-content img {
+    width: 600px;
+    height: 825px;
+    margin-right: 4%;
+    margin-left: 2%;
+} */
+
+.profile-content img {
+    max-width: 100%;
+    height: auto;
+    margin-right: 4%;
+    margin-left: 2%;
+    border: #373737 solid 2px;
+}
+
+
+.profile-text {
+    flex: 1;
+}
+
+.card-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    /* margin: 0 -10px; */
+    text-align: center;
+}
+
+.row {
+    display: flex;
+    justify-content: center;
+    margin: 10px 10px;
+}
+
+
+.b-game-card
+
+
+
+.card h3 {
+    margin-top: 0;
+}
+
+.card ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.card li {
+    margin-bottom: 10px;
+}
+
+
+
+
+.et-hero-tabs, .et-slide {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    position: relative;
+    background: #eee;
+    text-align: center;
+    padding: 0 2em;
+}
+.et-hero-tabs h1, .et-slide h1 {
+    font-size: 2rem;
+    margin: 0;
+    letter-spacing: 1rem;
+}
+.et-hero-tabs h3, .et-slide h3 {
+    font-size: 1rem;
+    letter-spacing: 0.3rem;
+    opacity: 0.6;
+}
+.et-hero-tabs-container {
+    display: flex;
+    flex-direction: row;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 70px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    background: #fff;
+    z-index: 10;
+}
+.et-hero-tabs-container--top {
+    position: fixed;
+    top: 0;
+}
+.et-hero-tab {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+    color: #000;
+    letter-spacing: 0.1rem;
+    transition: all 0.5s ease;
+    font-size: 0.8rem;
+}
+.et-hero-tab:hover {
+    color: white;
+    background: rgba(102, 177, 241, 0.8);
+    transition: all 0.5s ease;
+}
+.et-hero-tab-slider {
+    position: absolute;
+    bottom: 0;
+    width: 0;
+    height: 6px;
+    background: #66b1f1;
+    transition: left 0.3s ease;
+}
+@media (min-width: 800px) {
+    .et-hero-tabs h1, .et-slide h1 {
+        font-size: 3rem;
+}
+    .et-hero-tabs h3, .et-slide h3 {
+        font-size: 1rem;
+}
+    .et-hero-tab {
+        font-size: 1rem;
+}
+}
+
+
+
+
+
+
+.skills-section .card.card1 {
+    /* background: linear-gradient(135deg, #F0F2F5 0%, #D9DBE1 100%); */
+    width: 45%;
+}
+
+.skills-section .card.card2 {
+    /* background: linear-gradient(135deg, #D9DBE1 0%, #BEC1C9 100%); */
+    width: 45%;
+}
+
+.skills-section .card.card3 {
+    /* background: linear-gradient(135deg, #F0F2F5 0%, #BEC1C9 100%); */
+    width: 45%;
+}
+
+.skills-section .card.card4 {
+    /* background: linear-gradient(135deg, #BEC1C9 0%, #F0F2F5 100%); */
+    width: 45%;
+}
+
+
+
+
+.skills-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* padding-left: 25px; */
+    /* padding-right: 25px; */
+}
+
+.skills-section h2 {
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+}
+
+.card-container {
+    /* display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1.5rem; */
+}
+
+.skills-section .card {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    max-width: 100%; 
+    height: auto;
+    border-radius: 10px;
+    min-width: 280px;
+    /* box-shadow: 0 2px 20px rgba(0, 0, 0, 0.5); */
+    transform-style: preserve-3d;
+    transform: perspective(500px);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    border: #696969 2px solid;
+    transition: all 0.2s ease;
+}
+
+
+.skills-section .card:hover {
+    transform: perspective(500px) translateY(-10px);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.5);
+}
+
+.skills-section h3 {
+    font-size: 1.75rem;
+    margin-bottom: 1rem;
+}
+
+.skills-section .card p {
+    padding: 10px; 
+}
+
+
+.skills-section ul {
+    list-style-type: none;
+    padding: 0;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.5rem;
+}
+
+.skills-section li {
+    font-size: 0.9rem;
+    text-align: center;
+    background-color: rgba(18, 18, 18, 0.8);
+    color: #eee;
+    border-radius: 8px;
+    padding: 0.5em 0.2em 0.5em 0.2em;
+}
+
+.web, .python, .mern, .java {
+    text-decoration: underline;
+    margin-top: 1.5%;
+}
+
+.section5 {
+    margin: 0 auto; /* Center the section horizontally */
+    padding: 20px; /* Add padding to give some space */
+    width: 95%; /* Control the width of the section */
+    max-width: 1200px; /* Maximum width of the section */
+}
+
+.l-container {
+    display: flex; /* Align the cards in a row */
+    flex-wrap: wrap; /* Wrap the cards to the next line when they don't fit */
+    justify-content: space-between; /* Distribute equal space between the cards */
+    margin: 20px 0; /* Add some margin to the top and bottom */
+}
+
+.project-popup {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 9999;
+    background-color: rgba(0, 0, 0, 0.8);
+    width: 100%;
+    height: 100%;
+    padding: 20px;
+}
+
+.project-popup-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    background-color: white;
+    color: black;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.project-popup-content img {
+    max-width: 100%;
+    height: auto;
+}
+
+.project-popup-content a {
+    display: inline-block;
+    text-decoration: none;
+    color: white;
+    background-color: #f6d365;
+    padding: 10px 20px;
+    margin-top: 15px;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.project-popup-content a:hover {
+    background-color: #fda085;
+}
+
+.project-popup-content button {
+    display: inline-block;
+    text-decoration: none;
+    color: white;
+    background-color: #333;
+    padding: 5px 10px;
+    margin-top: 15px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.project-popup-content button:hover {
+    background-color: #555;
+}
+
+
+
+
+.l-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 30px; /* Adjust space between the cards */
+    width: 100%; /* Set the width to 100% */
+    max-width: 1800px; /* Increase the container max-width */
+    margin: 0 auto;
+}
+
+@media screen and (max-width: 760px) {
+    .l-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+.b-game-card {
+    position: relative;
+    /* z-index: 1; */
+    width: 100%;
+    padding-bottom: 56.25%; /* Adjust the aspect ratio to 16:9 */
+    perspective: 1000px;
+    display: inline-block;
+    vertical-align: top;
+    border: #000 solid 2px;
+}
+
+.b-game-card__cover {
+    position: absolute;
+    /* z-index: 1; */
+    top: 0;
+    left: 0;
+    width: 100%; /* Set the width to 100% */
+    height: 100%; /* Set the height to 100% */
+    overflow: hidden;
+    background-image: linear-gradient(120deg, #f6d365 0%, #fda085 100%);
+    background-size: cover;
+    background-position: center;
+    perspective-origin: 50% 50%;
+    transform-style: preserve-3d;
+    transform-origin: top center;
+    will-change: transform;
+    transform: skewX(0.001deg);
+    transition: transform 0.35s ease-in-out;
+}
+
+
+.b-game-card__cover::after {
+    display: block;
+    content: "";
+    position: absolute;
+    z-index: 100;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 120%;
+    background: linear-gradient(226deg, rgba(255, 255, 255, 0.4) 0%, rgba(255, 255, 255, 0.4) 35%, rgba(255, 255, 255, 0.2) 42%, rgba(255, 255, 255, 0) 60%);
+    transform: translateY(-20%);
+    will-change: transform;
+    transition: transform 0.65s cubic-bezier(0.18, 0.9, 0.58, 1);
+}
+.b-game-card:hover .b-game-card__cover {
+    transform: rotateX(7deg) translateY(-6px);
+}
+.b-game-card:hover .b-game-card__cover::after {
+    transform: translateY(0%);
+}
+.b-game-card::before {
+    display: block;
+    content: "";
+    position: absolute;
+    top: 5%;
+    left: 5%;
+    width: 90%;
+    height: 90%;
+    background: rgba(0, 0, 0, 0.5);
+    box-shadow: 0 6px 12px 12px rgba(0, 0, 0, 0.4);
+    will-change: opacity;
+    transform-origin: top center;
+    transform: skewX(0.001deg);
+    transition: transform 0.35s ease-in-out, opacity 0.5s ease-in-out;
+}
+.b-game-card:hover::before {
+    opacity: 0.6;
+    transform: rotateX(7deg) translateY(-6px) scale(1.05);
+}
+
+.gif-container {
+    margin-bottom: 20px;
+}
+
+.link-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+/* General styles */
+body {
+    font-family: Arial, sans-serif;
+}
+
+.section7 {
+    /* background-color: #f8f8f8; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* padding: 25px 0; */
+    width: 90%; /* Decreased from 100% */
+    margin: 0 auto; /* Centers the section if width is less than 100% */
+}
+
+.contact-box {
+    display: flex;
+    flex-direction: column; 
+    align-items: center;
+    justify-content: center;
+    width: 75%; 
+    border: #696969 solid 1.5px;
+    padding: 20px; 
+    border-radius: .5em;
+}
+
+form {
+    display: grid;
+    gap: 15px;
+    width: 100%; 
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+    /* width: 100%;  */
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    font-size: 14px;
+    font-family: inherit;
+}
+
+textarea {
+    resize: vertical;
+    min-height: 100px;
+}
+
+/* Button styles */
+button[type="submit"] {
+    width: 100%;
+    background-color: #959595;
+    color: white;
+    padding: 20px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+
+button[type="submit"]:hover {
+    background-color: #555555;
+}
+
+
+.profile-section .profile-content,
+.skills-section .card-container,
+.section5 .l-container,
+.section7 .contact-box {
+  width: 95%; /* Adjust as needed */
+  max-width: 1600px; /* Adjust as needed */
+  margin: 0 auto; /* This will center the content */
+}
+
+.skills-section .card-container {
+    display: flex; /* Align the cards in a row */
+    flex-wrap: wrap; /* Wrap the cards to the next line when they don't fit */
+    justify-content: space-between; /* Distribute equal space between the cards */
+}
+
+#about-me, #technical-skills, #contact-me, #project-showcase {
+    font-size: 50px;
+    text-align: center;
+    text-decoration: underline;
+    text-underline-offset: 0.15em;
+}
